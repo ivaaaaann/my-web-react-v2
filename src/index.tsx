@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./Theme";
@@ -38,7 +37,9 @@ body {
 	font-weight: 300;
 	line-height: 1;
   	box-sizing: border-box;
-	background-color: black;
+	background-color: ${(props) => props.theme.mainBg};
+	display: flex;
+	flex-direction: column;
 }
 menu, ol, ul {
 	list-style: none;
