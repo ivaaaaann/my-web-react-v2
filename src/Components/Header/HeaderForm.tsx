@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import useHeaderScroll from "../../Hooks/Header/useHeaderScroll";
-import { headerVariants, HeaderContainer } from "./HeaderForm.style";
+import {
+  headerVariants,
+  HeaderContainer,
+  HeaderWrap,
+  HeaderLogo,
+} from "./HeaderForm.style";
 
 const HeaderForm: React.FC = () => {
   const { headerAnimation, scrollY } = useHeaderScroll();
@@ -21,7 +26,9 @@ const HeaderForm: React.FC = () => {
       initial={"top"}
       animate={headerAnimation}
     >
-      asdsa
+      <HeaderWrap>
+        <HeaderLogo>asdsad</HeaderLogo>
+      </HeaderWrap>
     </HeaderContainer>
   );
 };

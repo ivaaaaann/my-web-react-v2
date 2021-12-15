@@ -4,7 +4,9 @@ import App from "./App";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./Theme";
 
-const GlobalStyle = createGlobalStyle`html, body, div, span, applet, object, iframe,
+const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -40,6 +42,7 @@ body {
 	background-color: ${(props) => props.theme.mainBg};
 	display: flex;
 	flex-direction: column;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 menu, ol, ul {
 	list-style: none;

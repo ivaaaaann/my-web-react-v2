@@ -10,6 +10,22 @@ export const HeaderContainer = styled(motion.div)`
   z-index: 2;
   background-color: ${(props) => props.theme.mainBg};
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HeaderWrap = styled.div`
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HeaderLogo = styled.h1`
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
 `;
 
 export const headerVariants = {
@@ -21,5 +37,6 @@ export const headerVariants = {
   scroll: {
     boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
     borderBottom: `1px solid #dbdbdb`,
+    backgroundColor: "#ffffff",
   },
 };
