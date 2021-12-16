@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useHeaderScroll from "../../Hooks/Header/useHeaderScroll";
+import Logo from "../../asset/img/Logo.svg";
+import WhiteLogo from "../../asset/img/WhiteLogo.svg";
 import {
   headerVariants,
   HeaderContainer,
@@ -9,6 +11,7 @@ import {
 
 const HeaderForm: React.FC = () => {
   const { headerAnimation, scrollY } = useHeaderScroll();
+  const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
     scrollY.onChange(() => {
@@ -20,6 +23,16 @@ const HeaderForm: React.FC = () => {
     });
   }, [scrollY, headerAnimation]);
 
+  useEffect(() => {
+    scrollY.onChange(() => {
+      if (scrollY.get() > 80) {
+        setIsTop(false);
+      } else {
+        setIsTop(true);
+      }
+    });
+  }, [scrollY, headerAnimation]);
+
   return (
     <HeaderContainer
       variants={headerVariants}
@@ -27,7 +40,7 @@ const HeaderForm: React.FC = () => {
       animate={headerAnimation}
     >
       <HeaderWrap>
-        <HeaderLogo>asdsad</HeaderLogo>
+        {isTop ? <HeaderLogo src={WhiteLogo} /> : <HeaderLogo src={Logo} />}
       </HeaderWrap>
     </HeaderContainer>
   );

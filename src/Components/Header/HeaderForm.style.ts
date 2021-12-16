@@ -22,10 +22,8 @@ export const HeaderWrap = styled.div`
   justify-content: center;
 `;
 
-export const HeaderLogo = styled.h1`
-  font-size: 24px;
-  color: black;
-  font-weight: bold;
+export const HeaderLogo = styled.img`
+  height: 40px;
 `;
 
 export const headerVariants = {
