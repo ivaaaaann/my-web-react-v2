@@ -12,8 +12,14 @@ const ProfileForm = () => {
   const { scrollY } = useViewportScroll();
 
   useEffect(() => {
-    console.log(window.scrollY);
-  }, [window.scrollY]);
+    scrollY.onChange(() => {
+      if (scrollY.get() > 2453) {
+        setIsArrival(true);
+      } else {
+        setIsArrival(false);
+      }
+    });
+  }, [scrollY]);
 
   return (
     <ProfileContainer>
