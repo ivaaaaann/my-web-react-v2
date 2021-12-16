@@ -11,6 +11,7 @@ const App: React.FC = () => {
         <Route exact path="/">
           <P.Hero />
           <P.Values />
+          <P.Profile />
         </Route>
       </Switch>
     </Router>
