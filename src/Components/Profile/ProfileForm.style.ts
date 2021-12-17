@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
   width: 100%;
@@ -9,6 +9,31 @@ export const ProfileContainer = styled.div`
   position: relative;
   overflow: hidden;
   background-color: ${(props) => props.theme.subBg};
+`;
+export const ProfileBoxWrap = styled.div`
+  width: 60%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ProfileItemWrap = styled.div`
+  column-gap: 60px;
+  display: flex;
+  margin-top: auto;
+`;
+
+export const ProfileTitle = styled.h1`
+  font-size: 40px;
+  color: ${(props) => props.theme.main_color};
+  font-weight: bold;
+`;
+
+export const ProfileSubTitle = styled.h1`
+  font-size: 18px;
+  color: gray;
+  font-weight: 300;
+  margin-top: 10px;
 `;
 
 export const ProfileBox = styled.div`
@@ -86,8 +111,12 @@ export const ProfileBox = styled.div`
     font-weight: bold;
   }
 
+  :first-child {
+    margin-left: 0px;
+  }
+
   :last-child {
-    margin-left: 100px;
+    margin-right: 0px;
   }
 `;
 

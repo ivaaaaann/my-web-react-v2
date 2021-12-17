@@ -1,5 +1,5 @@
 import React from "react";
-import { Bounce, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import ValuesBox from "./ValuesBox";
 import {
   ValuesBoxWrap,
@@ -51,7 +51,7 @@ const ValuesForm: React.FC = () => {
     <ValuesContainer>
       <ValuesWrap>
         <Fade direction="right">
-          <ValuesTitle>가치관</ValuesTitle>
+          <ValuesTitle>Values</ValuesTitle>
         </Fade>
         <Fade direction="right" delay={100}>
           <ValuesSubTitle>제가 추구하는 것들입니다.</ValuesSubTitle>

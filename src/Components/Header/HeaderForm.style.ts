@@ -16,7 +16,7 @@ export const HeaderContainer = styled(motion.div)`
 `;
 
 export const HeaderWrap = styled.div`
-  width: 60%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;

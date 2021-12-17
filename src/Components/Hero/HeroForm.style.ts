@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface HeroTitleProps {
+  isMainFont?: boolean;
+  fontSize?: number;
+}
+
 export const HeroContainer = styled.div`
   width: 100%;
   height: 100vh;
@@ -28,7 +33,7 @@ export const HeroProfileBoxWrap = styled.div`
   width: 950px;
   height: 610px;
   position: absolute;
-  left: 60%;
+  left: 55%;
   top: 58%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -51,14 +56,17 @@ export const HeroProfileBox = styled.div`
     display: flex;
     column-gap: 10px;
   }
+
+  article {
+    margin-top: auto;
+    display: flex;
+  }
 `;
 
-export const HeroTitle = styled.h1<{
-  isMainFont?: boolean;
-  fontSize?: number;
-}>`
+export const HeroTitle = styled.h1<HeroTitleProps>`
   color: ${(props) => (props.isMainFont ? props.theme.main_color : "white")};
   font-size: ${(props) => props.fontSize}px;
+  font-weight: 300;
 `;
 
 export const HeroCoverWrap = styled.div`
@@ -75,4 +83,34 @@ export const HeroCover = styled.div`
   width: 951px;
   height: 100vh;
   background-color: ${(props) => props.theme.main_color};
+`;
+
+export const HeroButton = styled.button`
+  min-width: 300px;
+  height: 50px;
+  margin-top: auto;
+  border-radius: 30px;
+  background-color: ${(props) => props.theme.main_color};
+  color: white;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+`;
+
+export const HeroSNSWrap = styled.div`
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 40px;
+  padding-left: 60px;
+
+  svg {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
 `;

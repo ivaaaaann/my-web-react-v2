@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const ValuesContainer = styled.div`
   width: 100%;
-  height: 2000px;
+  height: 700px;
   display: flex;
   justify-content: center;
-  padding: 50px 0px;
+  padding-bottom: 50px;
   box-sizing: border-box;
+  align-items: center;
 `;
 
 export const ValuesWrap = styled.div`

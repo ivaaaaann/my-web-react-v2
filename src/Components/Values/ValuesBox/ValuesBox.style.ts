@@ -36,12 +36,20 @@ export const ValuesBoxContainer = styled(motion.div)<{ bgPhoto: string }>`
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  margin: 0px auto;
+  margin: 0px 20px;
 
   &:hover {
     ${ValuesBoxContent} {
       top: 0px;
     }
+  }
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  &:first-child {
+    margin-left: 0px;
   }
 `;
 
