@@ -7,7 +7,7 @@ export const HeaderContainer = styled(motion.div)`
   position: fixed;
   display: flex;
   top: 0px;
-  z-index: 2;
+  z-index: 4;
   background-color: ${(props) => props.theme.mainBg};
   box-sizing: border-box;
   display: flex;

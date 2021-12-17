@@ -13,6 +13,7 @@ export const ValuesBoxContent = styled(motion.div)`
   flex-direction: column;
   padding: 50px;
   box-sizing: border-box;
+  z-index: 0;
   h1 {
     font-size: 25px;
     font-weight: bold;
@@ -26,7 +27,7 @@ export const ValuesBoxContent = styled(motion.div)`
   }
 `;
 
-export const ValuesBoxContainer = styled.div<{ bgPhoto: string }>`
+export const ValuesBoxContainer = styled(motion.div)<{ bgPhoto: string }>`
   width: 285px;
   height: 285px;
   position: relative;
@@ -35,6 +36,7 @@ export const ValuesBoxContainer = styled.div<{ bgPhoto: string }>`
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
+  margin: 0px auto;
 
   &:hover {
     ${ValuesBoxContent} {
@@ -42,3 +44,13 @@ export const ValuesBoxContainer = styled.div<{ bgPhoto: string }>`
     }
   }
 `;
+
+export const ValuesBoxVariants = {
+  normal: {
+    zIndex: 0,
+  },
+  hover: {
+    scale: 1.1,
+    zIndex: 1,
+  },
+};

@@ -1,11 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
 
-interface IHeroTitleProps {
-  isArrival: boolean;
-  startPoint: number;
-  isRight: boolean;
-}
-
 export const ProfileContainer = styled.div`
   width: 100%;
   height: 100vh;
@@ -17,21 +11,20 @@ export const ProfileContainer = styled.div`
   background-color: ${(props) => props.theme.subBg};
 `;
 
-export const HeroTitle = styled.div<IHeroTitleProps>`
+export const ProfileBox = styled.div`
   width: 540px;
   height: 700px;
   font-size: 40px;
   color: black;
-  position: absolute;
   font-weight: bold;
   background-color: ${(props) => props.theme.mainBg};
-  top: 15%;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 50px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin-right: 100px;
 
   div {
     display: flex;
@@ -93,22 +86,9 @@ export const HeroTitle = styled.div<IHeroTitleProps>`
     font-weight: bold;
   }
 
-  ${(props) =>
-    props.isRight
-      ? css`
-          right: 350px;
-        `
-      : css`
-          left: 350px;
-        `}
-  ${(props) =>
-    props.isArrival &&
-    css`
-      transition: 1.4s;
-      animation-name: ${HeroTitleFade(props.startPoint)};
-      animation-duration: 1.4s;
-      animation-fill-mode: both;
-    `};
+  :last-child {
+    margin-left: 100px;
+  }
 `;
 
 export const CityImg = styled.img`
@@ -129,12 +109,12 @@ export const LanguageImg = styled.img`
   margin-left: 5px;
 `;
 
-const HeroTitleFade = (startPoint: number) => keyframes`
-    from{
-        transform: translate3d(${startPoint}px, 0, 0);
-    }
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-`;
+// const HeroTitleFade = (startPoint: number) => keyframes`
+//     from{
+//         transform: translate3d(${startPoint}px, 0, 0);
+//     }
+//     to {
+//         transform: translate3d(0, 0, 0);
+//         opacity: 1;
+//     }
+// `;

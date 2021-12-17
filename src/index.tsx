@@ -42,8 +42,12 @@ body {
 	background-color: ${(props) => props.theme.mainBg};
 	display: flex;
 	flex-direction: column;
+}
+
+*{
 	font-family: 'Noto Sans KR', sans-serif;
 }
+
 menu, ol, ul {
 	list-style: none;
 }

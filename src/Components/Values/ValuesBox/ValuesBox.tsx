@@ -1,4 +1,8 @@
-import { ValuesBoxContainer, ValuesBoxContent } from "./ValuesBox.style";
+import {
+  ValuesBoxContainer,
+  ValuesBoxContent,
+  ValuesBoxVariants,
+} from "./ValuesBox.style";
 
 interface ValuesBoxProps {
   text: string;
@@ -8,7 +12,11 @@ interface ValuesBoxProps {
 
 const ValuesBox: React.FC<ValuesBoxProps> = ({ text, bgPhoto, title }) => {
   return (
-    <ValuesBoxContainer bgPhoto={bgPhoto}>
+    <ValuesBoxContainer
+      bgPhoto={bgPhoto}
+      variants={ValuesBoxVariants}
+      whileHover={"hover"}
+    >
       <ValuesBoxContent>
         <h1>{title}</h1>
         <p>{text}</p>
