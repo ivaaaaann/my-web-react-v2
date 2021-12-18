@@ -9,6 +9,9 @@ import {
   ProfileTitle,
   ProfileSubTitle,
   ProfileItemWrap,
+  ProfileCard,
+  ProfileCardCover,
+  ProfileCardImg,
 } from "./ProfileForm.style";
 
 const ProfileForm = () => {
@@ -53,7 +56,7 @@ const ProfileForm = () => {
             </ProfileBox>
           </Fade>
           <Fade direction={"right"}>
-            <ProfileBox>
+            {/* <ProfileBox>
               <div>
                 <article>
                   <h1>이름 : 임동현</h1>
@@ -120,7 +123,12 @@ const ProfileForm = () => {
                   </li>
                 </ul>
               </article>
-            </ProfileBox>
+            </ProfileBox> */}
+            <ProfileCard>
+              <ProfileCardCover>
+                <ProfileCardImg />
+              </ProfileCardCover>
+            </ProfileCard>
           </Fade>
         </ProfileItemWrap>
       </ProfileBoxWrap>

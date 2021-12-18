@@ -10,8 +10,8 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path="/">
           <P.Hero />
-          <P.Values />
           <P.Profile />
+          <P.Values />
         </Route>
       </Switch>
     </Router>

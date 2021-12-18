@@ -16,6 +16,7 @@ const ValuesBox: React.FC<ValuesBoxProps> = ({ text, bgPhoto, title }) => {
       bgPhoto={bgPhoto}
       variants={ValuesBoxVariants}
       whileHover={"hover"}
+      initial={"normal"}
     >
       <ValuesBoxContent>
         <h1>{title}</h1>

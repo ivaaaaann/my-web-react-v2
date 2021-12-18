@@ -6,6 +6,7 @@ import {
   ValuesContainer,
   ValuesSubTitle,
   ValuesTitle,
+  ValuesTitleWrap,
   ValuesWrap,
 } from "./ValuesForm.style";
 
@@ -50,12 +51,25 @@ const ValuesForm: React.FC = () => {
   return (
     <ValuesContainer>
       <ValuesWrap>
-        <Fade direction="right">
-          <ValuesTitle>Values</ValuesTitle>
-        </Fade>
-        <Fade direction="right" delay={100}>
-          <ValuesSubTitle>제가 추구하는 것들입니다.</ValuesSubTitle>
-        </Fade>
+        <ValuesTitleWrap>
+          <Fade direction="right">
+            <ValuesTitle>Values</ValuesTitle>
+          </Fade>
+          <Fade direction="right" delay={100}>
+            <ValuesSubTitle>
+              저는 다음 4가지가 능숙한 프론트엔드가 가장 이상적인 프론트엔드
+              개발자라고 생각합니다. 다음 4가지를 정한 이유는 첫번째 협업 은
+              개발자라면 당연히 갖춰야 하는 능력이기 때문입니다. 두번째 코드의
+              가독성과 효율성은 유지/보수를 해야한다면 필연적으로 따라오는
+              것이라고 생각하기 때문입니다. 세번째 기술은 프론트 분야에서는
+              빠르게 발전중입니다. 그래서 그 기술을 유연하게 받아들이고 접목
+              시키는 것이 중요하다고 생각하기 때문입니다. 네번째 이해는 기술을
+              유연하게 접목 시키기 위해선 깊게 알고 원리를 이해해야 가능하다고
+              생각하기 때문입니다. 저는 개발에 임할때면 다음 4가지를 항상
+              생각하며 개발합니다.
+            </ValuesSubTitle>
+          </Fade>
+        </ValuesTitleWrap>
         <ValuesBoxWrap>
           {Values.map((value) => {
             return (

@@ -37,6 +37,7 @@ export const ValuesBoxContainer = styled(motion.div)<{ bgPhoto: string }>`
   background-position: center;
   overflow: hidden;
   margin: 0px 20px;
+  z-index: 0;
 
   &:hover {
     ${ValuesBoxContent} {
@@ -58,6 +59,9 @@ export const ValuesBoxVariants = {
     zIndex: 0,
   },
   hover: {
+    transition: {
+      duration: 0.5,
+    },
     scale: 1.1,
     zIndex: 1,
   },

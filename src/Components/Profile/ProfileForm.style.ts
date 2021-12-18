@@ -120,6 +120,40 @@ export const ProfileBox = styled.div`
   }
 `;
 
+export const ProfileCard = styled.div`
+  width: 540px;
+  height: 700px;
+  margin-right: 0px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+`;
+
+export const ProfileCardCover = styled.div`
+  width: 100%;
+  height: 45%;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: ${(props) => props.theme.main_color};
+  position: relative;
+`;
+
+export const ProfileCardImg = styled.img`
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 100px;
+  border: 1px solid ${(props) => props.theme.mainBorder};
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: grey;
+`;
+
 export const CityImg = styled.img`
   width: 100%;
 `;
