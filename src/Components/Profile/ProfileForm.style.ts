@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
@@ -131,15 +132,24 @@ export const ProfileCard = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
+  overflow: hidden;
 `;
 
-export const ProfileCardCover = styled.div`
+export const ProfileCardCover = styled.div<{ bgPhoto: string }>`
   width: 100%;
-  height: 45%;
+  min-height: 45%;
   padding: 50px;
   box-sizing: border-box;
-  background-color: ${(props) => props.theme.main_color};
+  color: #182153;
+  background-image: linear-gradient(
+      rgba(24, 33, 83, 0.7),
+      rgba(24, 33, 83, 0.7)
+    ),
+    url(${(props) => props.bgPhoto});
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
 
 export const ProfileCardImg = styled.img`
@@ -151,33 +161,90 @@ export const ProfileCardImg = styled.img`
   bottom: 0px;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: grey;
+  background-color: ${(props) => props.theme.mainBorder};
 `;
 
-export const CityImg = styled.img`
+export const ProfileCardOverviewWrap = styled.div`
   width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    color: gray;
+    margin-top: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: ${(props) => props.theme.main_color};
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
 `;
 
-export const FaceImg = styled.img`
-  width: 150px;
-  height: 180px;
-  border: 1px solid black;
-  margin-left: auto;
+export const Slider = styled(motion.div)`
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  height: 80px;
 `;
 
-export const LanguageImg = styled.img`
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-  margin-left: 5px;
+export const Row = styled(motion.div)`
+  width: 438px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
 `;
 
-// const HeroTitleFade = (startPoint: number) => keyframes`
-//     from{
-//         transform: translate3d(${startPoint}px, 0, 0);
-//     }
-//     to {
-//         transform: translate3d(0, 0, 0);
-//         opacity: 1;
-//     }
-// `;
+export const rowVariants = {
+  hidden: {
+    x: 438,
+  },
+  visible: {
+    x: 0,
+  },
+  exit: {
+    x: -438,
+  },
+};
+
+export const ProfileStackBox = styled(motion.div)`
+  width: 136px;
+  height: 80px;
+  background-color: black;
+  color: white;
+`;
+
+export const SliderBtn = styled.button`
+  width: 25px;
+  height: 80px;
+  position: absolute;
+  right: -30px;
+  top: 0px;
+  cursor: pointer;
+  background-color: rgba(50, 50, 50, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+`;
