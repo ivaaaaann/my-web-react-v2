@@ -12,6 +12,7 @@ const App: React.FC = () => {
           <P.Hero />
           <P.Profile />
           <P.Values />
+          <P.Projects />
         </Route>
       </Switch>
     </Router>

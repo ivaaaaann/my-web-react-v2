@@ -192,15 +192,19 @@ export const ProfileCardOverviewWrap = styled.div`
     color: ${(props) => props.theme.main_color};
     font-weight: bold;
     margin-top: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
+`;
+export const SliderWrap = styled.div`
+  position: relative;
 `;
 
 export const Slider = styled(motion.div)`
   position: relative;
   width: 100%;
   z-index: 1;
-  height: 80px;
+  height: 90px;
+  overflow: hidden;
 `;
 
 export const Row = styled(motion.div)`
@@ -208,7 +212,7 @@ export const Row = styled(motion.div)`
   height: 80px;
   display: flex;
   justify-content: center;
-  column-gap: 10px;
+  column-gap: 70px;
   position: absolute;
   box-sizing: border-box;
   top: 0px;
@@ -228,23 +232,50 @@ export const rowVariants = {
 };
 
 export const ProfileStackBox = styled(motion.div)`
-  width: 136px;
+  width: 80px;
   height: 80px;
-  background-color: black;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  h1 {
+    font-size: 18px;
+    color: white;
+    display: none;
+  }
+
+  img {
+    width: 90%;
+    height: 90%;
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: center;
+  }
 `;
 
 export const SliderBtn = styled.button`
-  width: 25px;
+  width: 20px;
   height: 80px;
   position: absolute;
   right: -30px;
   top: 0px;
   cursor: pointer;
-  background-color: rgba(50, 50, 50, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border: 1px solid ${(props) => props.theme.mainBorder};
+  background: linear-gradient(rgba(24, 33, 83, 0.5), rgba(24, 33, 83, 0.5));
+  outline: none;
+  box-sizing: content-box;
+  padding: 0px;
+
+  svg {
+    width: 20px;
+  }
 `;

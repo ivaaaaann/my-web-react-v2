@@ -17,22 +17,40 @@ import {
   rowVariants,
   ProfileStackBox,
   SliderBtn,
+  SliderWrap,
 } from "./ProfileForm.style";
 
 interface stackListProps {
   img: string;
+  langName: string;
 }
 
 const stackList: stackListProps[] = [
-  { img: "자스" },
-  { img: "리액트" },
-  { img: "html/css" },
-  { img: "타입스크립트" },
-  { img: "스타일드 컴포넌트" },
-  { img: "레코일" },
-  { img: "C" },
-  { img: "C" },
-  { img: "C" },
+  {
+    img: "https://d1telmomo28umc.cloudfront.net/media/public/badges/JS.png",
+    langName: "JavaScript",
+  },
+  {
+    img: "https://d1telmomo28umc.cloudfront.net/media/public/badges/React_Z6rkrgv.png",
+    langName: "React",
+  },
+  {
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhU2azFVvSpOidu19kpvccTJjgIYOv8BQbKw&usqp=CAU",
+    langName: "HTML5/CSS3",
+  },
+  {
+    img: "https://d1telmomo28umc.cloudfront.net/media/public/badges/typescript_psOTuYC.png",
+    langName: "TypeScript",
+  },
+  {
+    img: "https://miro.medium.com/max/1400/1*Xc1KiqXUORE-qACgm3lS3w.png",
+    langName: "Styled-Components",
+  },
+
+  {
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvXIRiB_ideVv6UXblcvoC3yh__EszybXrRV-aePyJci_PnVLDv7beKrdtouPcjqAXriE&usqp=CAU",
+    langName: "Recoil",
+  },
 ];
 
 const ProfileForm = () => {
@@ -100,26 +118,32 @@ const ProfileForm = () => {
                 <h1>임동현</h1>
                 <h2>대구소프트웨어마이스터고등학교 재학중(프론트엔드)</h2>
                 <h3>스택</h3>
-                <Slider>
-                  <AnimatePresence
-                    initial={false}
-                    onExitComplete={toggleLeaving}
-                  >
-                    <Row
-                      variants={rowVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      transition={{ type: "tween", duration: 1 }}
-                      key={index}
+                <SliderWrap>
+                  <Slider>
+                    <AnimatePresence
+                      initial={false}
+                      onExitComplete={toggleLeaving}
                     >
-                      {stackList
-                        .slice(offset * index, offset * index + offset)
-                        .map((stack) => {
-                          return <ProfileStackBox>{stack.img}</ProfileStackBox>;
-                        })}
-                    </Row>
-                  </AnimatePresence>
+                      <Row
+                        variants={rowVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        transition={{ type: "tween", duration: 1 }}
+                        key={index}
+                      >
+                        {stackList
+                          .slice(offset * index, offset * index + offset)
+                          .map((stack) => {
+                            return (
+                              <ProfileStackBox>
+                                <img src={stack.img} />
+                              </ProfileStackBox>
+                            );
+                          })}
+                      </Row>
+                    </AnimatePresence>
+                  </Slider>
                   <SliderBtn onClick={increaseIndex}>
                     <svg viewBox="0 0 20 20">
                       <path
@@ -128,7 +152,7 @@ const ProfileForm = () => {
                       ></path>
                     </svg>
                   </SliderBtn>
-                </Slider>
+                </SliderWrap>
               </ProfileCardOverviewWrap>
             </ProfileCard>
           </Fade>
