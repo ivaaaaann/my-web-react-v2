@@ -20,12 +20,12 @@ import {
   SliderWrap,
 } from "./ProfileForm.style";
 
-interface stackListProps {
+interface IstackListProps {
   img: string;
   langName: string;
 }
 
-const stackList: stackListProps[] = [
+const stackList: IstackListProps[] = [
   {
     img: "https://d1telmomo28umc.cloudfront.net/media/public/badges/JS.png",
     langName: "JavaScript",

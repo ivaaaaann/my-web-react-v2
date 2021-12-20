@@ -4,13 +4,13 @@ import {
   ValuesBoxVariants,
 } from "./ValuesBox.style";
 
-interface ValuesBoxProps {
+interface IValuesBoxProps {
   text: string;
   bgPhoto: string;
   title: string;
 }
 
-const ValuesBox: React.FC<ValuesBoxProps> = ({ text, bgPhoto, title }) => {
+const ValuesBox: React.FC<IValuesBoxProps> = ({ text, bgPhoto, title }) => {
   return (
     <ValuesBoxContainer
       bgPhoto={bgPhoto}

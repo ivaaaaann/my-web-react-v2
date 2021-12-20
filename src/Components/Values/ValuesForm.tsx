@@ -10,14 +10,14 @@ import {
   ValuesWrap,
 } from "./ValuesForm.style";
 
-interface valuesArrProps {
+interface IvaluesArrProps {
   bgPhoto: string;
   title: string;
   text: string;
   delay: number;
 }
 
-const Values: valuesArrProps[] = [
+const Values: IvaluesArrProps[] = [
   {
     bgPhoto:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_33w_MF7o9adhtNGSPH-dkgm6rzt0P5RPg&usqp=CAU",

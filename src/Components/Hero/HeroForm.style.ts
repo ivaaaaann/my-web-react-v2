@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface HeroTitleProps {
+interface IHeroTitleProps {
   isMainFont?: boolean;
   fontSize?: number;
 }
@@ -63,7 +63,7 @@ export const HeroProfileBox = styled.div`
   }
 `;
 
-export const HeroTitle = styled.h1<HeroTitleProps>`
+export const HeroTitle = styled.h1<IHeroTitleProps>`
   color: ${(props) => (props.isMainFont ? props.theme.main_color : "white")};
   font-size: ${(props) => props.fontSize}px;
   font-weight: 300;
