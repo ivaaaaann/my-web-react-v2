@@ -8,7 +8,7 @@ const App: React.FC = () => {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/">
+        <Route path={["/", "/bigMovie/:movieName"]}>
           <P.Hero />
           <P.Profile />
           <P.Values />

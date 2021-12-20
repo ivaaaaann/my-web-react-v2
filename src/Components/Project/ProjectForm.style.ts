@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 export const ProjectFormContainer = styled.div`
@@ -12,7 +13,6 @@ export const ProjectFormContainer = styled.div`
 
 export const ProjectWrap = styled.div`
   width: 60%;
-  height: 1000px;
   display: flex;
   flex-direction: column;
 `;
@@ -45,6 +45,8 @@ export const ProjectCategoryBtn = styled.button<{ isClick: boolean }>`
   height: 40px;
   margin: 0px 30px;
   border-radius: 5px;
+  cursor: pointer;
+
   ${(props) =>
     props.isClick
       ? css`
@@ -56,6 +58,21 @@ export const ProjectCategoryBtn = styled.button<{ isClick: boolean }>`
           border: 1px solid ${(props) => props.theme.main_color};
           color: ${(props) => props.theme.main_color};
         `}
+`;
 
-  cursor: pointer;
+export const ProjectBoxWrap = styled.div`
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 37px;
+  row-gap: 37px;
+`;
+
+export const ProjectBox = styled(motion.div)`
+  width: 255px;
+  height: 286px;
+  border: 1px solid ${(props) => props.theme.mainBorder};
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
