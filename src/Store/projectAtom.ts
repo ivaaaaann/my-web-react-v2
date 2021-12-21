@@ -1,7 +1,7 @@
 import { atom } from "recoil";
 import * as imgs from "../asset/img";
 
-interface IProjectListProps {
+export interface IProjectListProps {
   type: string;
   title: string;
   subTitle: string;

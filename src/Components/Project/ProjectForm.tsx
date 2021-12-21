@@ -1,9 +1,10 @@
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, useViewportScroll } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
-import { useHistory } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { categoryBtnClickAtom } from "../../Store/categoryBtnClickAtom";
 import { projectAtom, ProjectList } from "../../Store/projectAtom";
+import BigProjectModal from "./BigProjectModal";
 
 import {
   ProjectBox,
@@ -26,8 +27,19 @@ const ProjectForm: React.FC = () => {
   const [projectList, setProjectList] = useRecoilState(projectAtom);
   const history = useHistory();
 
+  const { scrollY } = useViewportScroll();
+
+  const bigProjectMatch = useRouteMatch<{ projectName: string }>(
+    "/bigProject/:projectName"
+  );
+
+  console.log(bigProjectMatch);
+
   const onBoxClick = (projectName: string) => {
     history.push(`/bigProject/${projectName}`);
+    const scrollY = document.body.style.top;
+    document.body.style.cssText = "";
+    window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
   };
 
   const onOverLayClick = () => history.push("/");
@@ -117,6 +129,14 @@ const ProjectForm: React.FC = () => {
           </AnimatePresence>
         </ProjectBoxWrap>
       </ProjectWrap>
+      <AnimatePresence>
+        {bigProjectMatch && (
+          <BigProjectModal
+            onOverLayClick={onOverLayClick}
+            projectName={bigProjectMatch.params.projectName}
+          />
+        )}
+      </AnimatePresence>
     </ProjectFormContainer>
   );
 };
