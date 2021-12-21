@@ -94,6 +94,6 @@ export const ProjectBoxVariants = {
 
 export const ProjectBoxImg = styled.img`
   width: 100%;
-  height: 55%;
+  height: 50%;
   object-fit: cover;
 `;

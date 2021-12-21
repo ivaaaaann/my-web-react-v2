@@ -13,6 +13,7 @@ const App: React.FC = () => {
           <P.Profile />
           <P.Values />
           <P.Projects />
+          <P.Footer />
         </Route>
       </Switch>
     </Router>

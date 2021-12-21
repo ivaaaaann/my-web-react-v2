@@ -6,5 +6,6 @@ declare module "styled-components" {
     subBg: "#f1f1f1";
     mainBg: "#ffffff";
     mainBorder: "#dbdbdb";
+    darkBg: "#222";
   }
 }
