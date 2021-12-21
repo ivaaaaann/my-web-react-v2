@@ -6,9 +6,9 @@ export const ProjectFormContainer = styled.div`
   height: auto;
   background-color: ${(props) => props.theme.subBg};
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 100px 0px;
+  min-height: 1000px;
 `;
 
 export const ProjectWrap = styled.div`
@@ -77,6 +77,7 @@ export const ProjectBox = styled(motion.div)`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 `;
 
 export const ProjectBoxVariants = {
@@ -94,6 +95,28 @@ export const ProjectBoxVariants = {
 
 export const ProjectBoxImg = styled.img`
   width: 100%;
-  height: 50%;
+  min-height: 55%;
   object-fit: cover;
+`;
+
+export const ProjectBoxInfo = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(24, 33, 83, 0.1), rgba(24, 33, 83, 0.1));
+  color: black;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ProjectBoxTitle = styled.div`
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+`;
+
+export const ProjectBoxSubTitle = styled.p`
+  font-size: 15px;
+  color: grey;
 `;

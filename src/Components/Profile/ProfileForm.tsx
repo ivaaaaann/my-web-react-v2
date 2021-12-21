@@ -134,9 +134,9 @@ const ProfileForm = () => {
                       >
                         {stackList
                           .slice(offset * index, offset * index + offset)
-                          .map((stack) => {
+                          .map((stack, index) => {
                             return (
-                              <ProfileStackBox>
+                              <ProfileStackBox key={index}>
                                 <img src={stack.img} />
                               </ProfileStackBox>
                             );

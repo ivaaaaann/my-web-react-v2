@@ -1,5 +1,4 @@
 import { AnimatePresence } from "framer-motion";
-import { ChangeEvent, useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { useHistory } from "react-router-dom";
 import { useRecoilState } from "recoil";
@@ -9,6 +8,9 @@ import { projectAtom, ProjectList } from "../../Store/projectAtom";
 import {
   ProjectBox,
   ProjectBoxImg,
+  ProjectBoxInfo,
+  ProjectBoxSubTitle,
+  ProjectBoxTitle,
   ProjectBoxVariants,
   ProjectBoxWrap,
   ProjectCategoryBtn,
@@ -60,10 +62,6 @@ const ProjectForm: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(projectList);
-  }, [projectList]);
-
   return (
     <ProjectFormContainer>
       <ProjectWrap>
@@ -97,14 +95,21 @@ const ProjectForm: React.FC = () => {
           <AnimatePresence>
             {projectList.map((project, index) => {
               return (
-                <Fade direction="bottom-right" delay={index * 100}>
+                <Fade direction="bottom-right" delay={index * 100} key={index}>
                   <ProjectBox
                     variants={ProjectBoxVariants}
                     initial={"normal"}
                     whileHover={"hover"}
                     layoutId={`movieModal_${project.title}`}
+                    onClick={() => onBoxClick(project.title)}
                   >
                     <ProjectBoxImg src={project.img} />
+                    <ProjectBoxInfo>
+                      <ProjectBoxTitle>{project.title}</ProjectBoxTitle>
+                      <ProjectBoxSubTitle>
+                        {project.subTitle}
+                      </ProjectBoxSubTitle>
+                    </ProjectBoxInfo>
                   </ProjectBox>
                 </Fade>
               );

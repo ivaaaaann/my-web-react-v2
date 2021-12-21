@@ -71,9 +71,9 @@ const ValuesForm: React.FC = () => {
           </Fade>
         </ValuesTitleWrap>
         <ValuesBoxWrap>
-          {Values.map((value) => {
+          {Values.map((value, index) => {
             return (
-              <Fade direction="up" delay={value.delay}>
+              <Fade direction="up" delay={value.delay} key={index}>
                 <ValuesBox
                   title={value.title}
                   text={value.text}
