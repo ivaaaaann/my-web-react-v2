@@ -1,12 +1,15 @@
 import { AnimatePresence } from "framer-motion";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { useHistory } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { categoryBtnClickAtom } from "../../Store/categoryBtnClickAtom";
 import { projectAtom, ProjectList } from "../../Store/projectAtom";
 
 import {
   ProjectBox,
+  ProjectBoxImg,
+  ProjectBoxVariants,
   ProjectBoxWrap,
   ProjectCategoryBtn,
   ProjectCategoryBtnWrap,
@@ -19,6 +22,13 @@ import {
 const ProjectForm: React.FC = () => {
   const [isClick, setIsClick] = useRecoilState(categoryBtnClickAtom);
   const [projectList, setProjectList] = useRecoilState(projectAtom);
+  const history = useHistory();
+
+  const onBoxClick = (projectName: string) => {
+    history.push(`/bigProject/${projectName}`);
+  };
+
+  const onOverLayClick = () => history.push("/");
 
   const ToggleCategory = (categoryName: string): void => {
     setProjectList(ProjectList);
@@ -85,8 +95,19 @@ const ProjectForm: React.FC = () => {
         </ProjectCategoryBtnWrap>
         <ProjectBoxWrap>
           <AnimatePresence>
-            {projectList.map((project) => {
-              return <ProjectBox></ProjectBox>;
+            {projectList.map((project, index) => {
+              return (
+                <Fade direction="bottom-right" delay={index * 100}>
+                  <ProjectBox
+                    variants={ProjectBoxVariants}
+                    initial={"normal"}
+                    whileHover={"hover"}
+                    layoutId={`movieModal_${project.title}`}
+                  >
+                    <ProjectBoxImg src={project.img} />
+                  </ProjectBox>
+                </Fade>
+              );
             })}
           </AnimatePresence>
         </ProjectBoxWrap>

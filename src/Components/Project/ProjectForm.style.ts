@@ -75,4 +75,25 @@ export const ProjectBox = styled(motion.div)`
   border: 1px solid ${(props) => props.theme.mainBorder};
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ProjectBoxVariants = {
+  normal: {
+    y: 0,
+  },
+  hover: {
+    y: -35,
+    transition: {
+      duration: 0.3,
+      type: "tween",
+    },
+  },
+};
+
+export const ProjectBoxImg = styled.img`
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
 `;

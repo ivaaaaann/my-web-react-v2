@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+import * as imgs from "../asset/img";
 
 interface IProjectListProps {
   type: string;
@@ -6,6 +7,7 @@ interface IProjectListProps {
   subTitle: string;
   field: string;
   stacks: IProjectStackProps[];
+  img: string;
 }
 
 interface IProjectStackProps {
@@ -18,6 +20,7 @@ export const ProjectList: IProjectListProps[] = [
     title: "GLASS",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigGlass,
     stacks: [],
   },
   {
@@ -25,6 +28,7 @@ export const ProjectList: IProjectListProps[] = [
     title: "PTPO",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigPTPO,
     stacks: [],
   },
   {
@@ -32,6 +36,8 @@ export const ProjectList: IProjectListProps[] = [
     title: "트위터 클론코딩",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigTwiiterClone,
+
     stacks: [],
   },
   {
@@ -39,6 +45,8 @@ export const ProjectList: IProjectListProps[] = [
     title: "넷플릭스 클론코딩",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigNetflixClone,
+
     stacks: [],
   },
   {
@@ -46,6 +54,8 @@ export const ProjectList: IProjectListProps[] = [
     title: "coinTracker 클론 코딩",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigCoinTracker,
+
     stacks: [],
   },
   {
@@ -53,6 +63,8 @@ export const ProjectList: IProjectListProps[] = [
     title: "lastfm 클론 코딩",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigLastfmClone,
+
     stacks: [],
   },
   {
@@ -60,6 +72,8 @@ export const ProjectList: IProjectListProps[] = [
     title: "My-Web-React",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigMyWebReact,
+
     stacks: [],
   },
   {
@@ -67,6 +81,8 @@ export const ProjectList: IProjectListProps[] = [
     title: "My-Web-React-V2",
     subTitle: "",
     field: "front-end",
+    img: imgs.bigMyWebReactV2,
+
     stacks: [],
   },
 ];
