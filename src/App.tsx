@@ -8,7 +8,7 @@ const App: React.FC = () => {
     <Router>
       <Header />
       <Switch>
-        <Route path={["/", "/bigProject/:projectName"]}>
+        <Route path={["/", "/bigProject/:projectId"]}>
           <P.Hero />
           <P.Profile />
           <P.Values />

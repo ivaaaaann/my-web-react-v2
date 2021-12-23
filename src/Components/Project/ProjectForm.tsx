@@ -1,4 +1,5 @@
 import { AnimatePresence, useViewportScroll } from "framer-motion";
+import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { useHistory, useRouteMatch } from "react-router-dom";
 import { useRecoilState } from "recoil";
@@ -29,17 +30,12 @@ const ProjectForm: React.FC = () => {
 
   const { scrollY } = useViewportScroll();
 
-  const bigProjectMatch = useRouteMatch<{ projectName: string }>(
-    "/bigProject/:projectName"
+  const bigProjectMatch = useRouteMatch<{ projectId: string }>(
+    "/bigProject/:projectId"
   );
 
-  console.log(bigProjectMatch);
-
-  const onBoxClick = (projectName: string) => {
-    history.push(`/bigProject/${projectName}`);
-    const scrollY = document.body.style.top;
-    document.body.style.cssText = "";
-    window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+  const onBoxClick = (projectId: string) => {
+    history.push(`/bigProject/${projectId}`);
   };
 
   const onOverLayClick = () => history.push("/");
@@ -73,6 +69,21 @@ const ProjectForm: React.FC = () => {
         break;
     }
   };
+
+  useEffect(() => {
+    if (bigProjectMatch !== null) {
+      document.body.style.cssText = `
+      position: fixed; 
+      top: -${window.scrollY}px;
+      overflow-y: scroll;
+      width: 100%;`;
+      return () => {
+        const scrollY = document.body.style.top;
+        document.body.style.cssText = "";
+        window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+      };
+    }
+  }, [bigProjectMatch]);
 
   return (
     <ProjectFormContainer>
@@ -112,8 +123,8 @@ const ProjectForm: React.FC = () => {
                     variants={ProjectBoxVariants}
                     initial={"normal"}
                     whileHover={"hover"}
-                    layoutId={`movieModal_${project.title}`}
-                    onClick={() => onBoxClick(project.title)}
+                    layoutId={`projectModal_${project.id}`}
+                    onClick={() => onBoxClick(project.id + "")}
                   >
                     <ProjectBoxImg src={project.img} />
                     <ProjectBoxInfo>
@@ -133,7 +144,7 @@ const ProjectForm: React.FC = () => {
         {bigProjectMatch && (
           <BigProjectModal
             onOverLayClick={onOverLayClick}
-            projectName={bigProjectMatch.params.projectName}
+            projectId={bigProjectMatch.params.projectId}
           />
         )}
       </AnimatePresence>
