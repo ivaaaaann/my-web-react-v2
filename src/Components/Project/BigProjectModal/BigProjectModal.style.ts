@@ -55,7 +55,7 @@ export const BigProjectModalStackWrap = styled.div`
 `;
 
 export const BigProjectModalStack = styled.div`
-  width: 80px;
+  width: auto;
   height: 30px;
   border: 1px solid ${(props) => props.theme.mainBorder};
   background-color: ${(props) => props.theme.subBg};
@@ -64,6 +64,7 @@ export const BigProjectModalStack = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0px 10px;
 `;
 
 export const BigProjectModalQuestionText = styled.h1`
@@ -76,5 +77,25 @@ export const BigProjectModalQuestionText = styled.h1`
 export const BigProjectModalText = styled.p`
   font-size: 16px;
   margin-top: 10px;
-  line-height: 17px;
+  line-height: 18px;
+`;
+
+export const BigProjectModalGithubButton = styled.button`
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  margin-top: auto;
+  border: 0px;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
 `;

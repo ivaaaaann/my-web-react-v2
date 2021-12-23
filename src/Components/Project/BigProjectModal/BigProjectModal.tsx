@@ -3,6 +3,7 @@ import { useState } from "react";
 import { IProjectListProps, ProjectList } from "../../../Store/projectAtom";
 import {
   BigProjectModalContainer,
+  BigProjectModalGithubButton,
   BigProjectModalImg,
   BigProjectModalIntroWrap,
   BigProjectModalOverLay,
@@ -74,6 +75,21 @@ const BigProjectModal: React.FC<IbigProjectModalProps> = ({
               <BigProjectModalText>{projectData.field}</BigProjectModalText>
             </>
           )}
+          {projectData.learned && (
+            <>
+              <BigProjectModalQuestionText>배운건?</BigProjectModalQuestionText>
+              <BigProjectModalText>{projectData.learned}</BigProjectModalText>
+            </>
+          )}
+          <BigProjectModalGithubButton
+            onClick={() => window.open(projectData.githubLink, "_blank")}
+          >
+            <img
+              src={
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
+              }
+            />
+          </BigProjectModalGithubButton>
         </BigProjectModalIntroWrap>
       </BigProjectModalContainer>
     </>
