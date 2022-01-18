@@ -6,3 +6,4 @@ export { default as bigNetflixClone } from "../img/big-NetflixClone.png";
 export { default as bigPTPO } from "../img/big-PTPO.png";
 export { default as bigTwiiterClone } from "../img/big-twitterCloneCoding.png";
 export { default as bigMyWebReactV2 } from "../img/big-my-web-react-v2.png";
+export { default as bigMatitsogo } from "../img/big-Matitsogo.png";

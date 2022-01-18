@@ -107,6 +107,20 @@ export const ProjectList: IProjectListProps[] = [
     stacks: ["React", "TypeScript", "Recoil"],
     githubLink: "https://github.com/ldh3907/my-web-react-V2",
   },
+  {
+    id: 8,
+    type: "team",
+    title: "맛있소고",
+    subTitle:
+      "대구소프트웨어마이스터고등학교 근처 맛집을 추천하는 플렛폼입니다.",
+    impression:
+      "5기 형들과 같이 하는 프로젝트여서 많이 긴장되는 부분이 있었습니다. 전체적인 개발은 형들이 하고, 저희는 발표, 디자인 등을 맡았습니다. 형들과 함께 하다 보니 협업하는 과정을 깊게 알지는 못 했어도, 맛보기 정도는 한 것 같습니다.",
+    field:
+      "전체적인 개발은 형들이 하고, 저는 웹 퍼블리싱(반응형 등), 발표자를 맡았습니다.",
+    img: imgs.bigMatitsogo,
+    stacks: ["HTML5&CSS3"],
+    githubLink: "https://github.com/2021-summer-hackerthon/web",
+  },
 ];
 
 export const projectAtom = atom<IProjectListProps[]>({
