@@ -34,7 +34,6 @@ export const BigProjectModalImg = styled.img`
 export const BigProjectModalIntroWrap = styled.div`
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   padding: 50px;
@@ -51,7 +50,9 @@ export const BigProjectModalStackWrap = styled.div`
   width: 100%;
   display: flex;
   column-gap: 10px;
+  row-gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 `;
 
 export const BigProjectModalStack = styled.div`
@@ -65,6 +66,18 @@ export const BigProjectModalStack = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0px 10px;
+`;
+
+export const BigProjectModalQuestionWrap = styled.div`
+  width: 100%;
+  height: 450px;
+  display: flex;
+  margin: auto 0px;
+  flex-direction: column;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const BigProjectModalQuestionText = styled.h1`

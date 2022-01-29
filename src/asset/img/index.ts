@@ -7,3 +7,7 @@ export { default as bigPTPO } from "../img/big-PTPO.png";
 export { default as bigTwiiterClone } from "../img/big-twitterCloneCoding.png";
 export { default as bigMyWebReactV2 } from "../img/big-my-web-react-v2.png";
 export { default as bigMatitsogo } from "../img/big-Matitsogo.png";
+export { default as bigMoiza } from "../img/big-Moiza.png";
+export { default as bigHighthon7th } from "../img/big-Highthon7th.png";
+export { default as bigBoilerplate } from "../img/big-Boilerplate.png";
+export { default as ProfileFace } from "../img/ProfileImg.jpg";

@@ -161,7 +161,8 @@ export const ProfileCardImg = styled.img`
   bottom: 0px;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: ${(props) => props.theme.mainBorder};
+  background-color: #a8d6f6;
+  object-fit: scale-down;
 `;
 
 export const ProfileCardOverviewWrap = styled.div`

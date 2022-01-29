@@ -7,6 +7,7 @@ import {
   BigProjectModalImg,
   BigProjectModalIntroWrap,
   BigProjectModalOverLay,
+  BigProjectModalQuestionWrap,
   BigProjectModalQuestionText,
   BigProjectModalStack,
   BigProjectModalStackWrap,
@@ -27,9 +28,6 @@ const BigProjectModal: React.FC<IbigProjectModalProps> = ({
     ProjectList[parseInt(projectId)]
   );
   const { scrollY } = useViewportScroll();
-
-  console.log(projectData);
-  console.log(`movieModal_${projectId}`);
 
   return (
     <>
@@ -55,32 +53,36 @@ const BigProjectModal: React.FC<IbigProjectModalProps> = ({
               );
             })}
           </BigProjectModalStackWrap>
-          <BigProjectModalQuestionText>소개</BigProjectModalQuestionText>
-          <BigProjectModalText>{projectData.subTitle}</BigProjectModalText>
-          {projectData.impression && (
-            <>
-              <BigProjectModalQuestionText>
-                느낀점은?
-              </BigProjectModalQuestionText>
-              <BigProjectModalText>
-                {projectData.impression}
-              </BigProjectModalText>
-            </>
-          )}
-          {projectData.field && (
-            <>
-              <BigProjectModalQuestionText>
-                맡은 역할은?
-              </BigProjectModalQuestionText>
-              <BigProjectModalText>{projectData.field}</BigProjectModalText>
-            </>
-          )}
-          {projectData.learned && (
-            <>
-              <BigProjectModalQuestionText>배운건?</BigProjectModalQuestionText>
-              <BigProjectModalText>{projectData.learned}</BigProjectModalText>
-            </>
-          )}
+          <BigProjectModalQuestionWrap>
+            <BigProjectModalQuestionText>소개</BigProjectModalQuestionText>
+            <BigProjectModalText>{projectData.subTitle}</BigProjectModalText>
+            {projectData.impression && (
+              <>
+                <BigProjectModalQuestionText>
+                  느낀점은?
+                </BigProjectModalQuestionText>
+                <BigProjectModalText>
+                  {projectData.impression}
+                </BigProjectModalText>
+              </>
+            )}
+            {projectData.field && (
+              <>
+                <BigProjectModalQuestionText>
+                  맡은 역할은?
+                </BigProjectModalQuestionText>
+                <BigProjectModalText>{projectData.field}</BigProjectModalText>
+              </>
+            )}
+            {projectData.learned && (
+              <>
+                <BigProjectModalQuestionText>
+                  배운건?
+                </BigProjectModalQuestionText>
+                <BigProjectModalText>{projectData.learned}</BigProjectModalText>
+              </>
+            )}
+          </BigProjectModalQuestionWrap>
           <BigProjectModalGithubButton
             onClick={() => window.open(projectData.githubLink, "_blank")}
           >

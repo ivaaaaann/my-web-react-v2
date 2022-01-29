@@ -121,6 +121,43 @@ export const ProjectList: IProjectListProps[] = [
     stacks: ["HTML5&CSS3"],
     githubLink: "https://github.com/2021-summer-hackerthon/web",
   },
+  {
+    id: 9,
+    type: "team",
+    title: "MOIZA",
+    subTitle: "소프트웨어고 통합 커뮤니티 플랫폼입니다.",
+    impression:
+      "다른 마이스터고 애들과 협업을 하면서 깃플로우, 깃헙플로우 등 여러 협업 방법을 알게 되었고, 확실히 규모 있는 프로젝트다 보니 유지/보수(리소스 최소와, 재활용 컴포넌트, 리팩토링 등) 에 대해 많이 신경썼던거 같습니다. ",
+    field:
+      "저는 프론트엔드 개발을 맡았습니다. 로그인/회원가입/아이디&비밀번호 찾기 부분 퍼블리싱과 로직을 짰습니다.",
+    img: imgs.bigMoiza,
+    stacks: ["React", "TypeScript", "Recoil", "Styled-Components"],
+    githubLink: "https://github.com/Software-Meister-High-School-Community",
+  },
+  {
+    id: 10,
+    type: "team",
+    title: "하이톤 랜딩페이지",
+    subTitle: "제 7회 하이톤에서 만든 하이톤 랜딩페이지 입니다.",
+    impression:
+      "대덕,광주 등 여러 학교가 참여하는 해커톤에서 기술적, 친목적으로 많은 경험을 쌓을 수 있었습니다.저희 팀은 하이톤에서 나온 작품을 제출, 관람 할 수 있는 하이톤 랜딩페이지를 만들었습니다. 백엔드 광소마고에 3학년 선배님이랑 같이 팀을 하게 되었는데 개발자 도구(network, source)에 대한 꿀팁을 많이 가르쳐 주셨습니다. 그리고 access-token 디코드에 대한 것도 배웠습니다.",
+    field:
+      "저는 프론트엔드 개발을 맡았습니다. 해커톤이라 체계적인 역할분담은 하지 않고 하고싶은부분 만드는 형식이었습니다.",
+    img: imgs.bigHighthon7th,
+    stacks: ["React", "TypeScript", "Recoil", "Styled-Components"],
+    githubLink: "https://github.com/7thHighthon",
+  },
+  {
+    id: 11,
+    type: "toy",
+    title: "React Boilerplate",
+    subTitle: "웹팩을 적용한 React + TS boilerplate 입니다.",
+    impression:
+      "웹팩 공부를 하고 어떻게 웹팩을 사용해야 할지 모르겠어서 구글링을 해보다가 boilerplate를 만들게 되었습니다. 만들면서 강의에서 안나왔던 babel-loader 나 ts-loader 등 여러 로더들을 알게 되었고, 만든 boilerplate를 npm에 올리는 방법도 배웠습니다.",
+    img: imgs.bigBoilerplate,
+    stacks: ["React", "TypeScript", "Webpack5"],
+    githubLink: "https://github.com/ldh3907/react-boilerplate",
+  },
 ];
 
 export const projectAtom = atom<IProjectListProps[]>({
