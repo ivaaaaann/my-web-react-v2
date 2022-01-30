@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.js": "/my-web-react-v2/static/js/main.b67759f7.chunk.js",
+    "main.js.map": "/my-web-react-v2/static/js/main.b67759f7.chunk.js.map",
+    "runtime-main.js": "/my-web-react-v2/static/js/runtime-main.7d4b6ff3.js",
+    "runtime-main.js.map": "/my-web-react-v2/static/js/runtime-main.7d4b6ff3.js.map",
+    "static/js/2.082db305.chunk.js": "/my-web-react-v2/static/js/2.082db305.chunk.js",
+    "static/js/2.082db305.chunk.js.map": "/my-web-react-v2/static/js/2.082db305.chunk.js.map",
+    "index.html": "/my-web-react-v2/index.html",
+    "static/js/2.082db305.chunk.js.LICENSE.txt": "/my-web-react-v2/static/js/2.082db305.chunk.js.LICENSE.txt",
+    "static/media/Logo.c3b40969.svg": "/my-web-react-v2/static/media/Logo.c3b40969.svg",
+    "static/media/ProfileImg.60979319.jpg": "/my-web-react-v2/static/media/ProfileImg.60979319.jpg",
+    "static/media/WhiteLogo.84893236.svg": "/my-web-react-v2/static/media/WhiteLogo.84893236.svg",
+    "static/media/big-Boilerplate.27d3dc02.png": "/my-web-react-v2/static/media/big-Boilerplate.27d3dc02.png",
+    "static/media/big-Cointracker.91ecfc1c.png": "/my-web-react-v2/static/media/big-Cointracker.91ecfc1c.png",
+    "static/media/big-Glass.6c5be5df.png": "/my-web-react-v2/static/media/big-Glass.6c5be5df.png",
+    "static/media/big-Highthon7th.ef74aba8.png": "/my-web-react-v2/static/media/big-Highthon7th.ef74aba8.png",
+    "static/media/big-LastfmClone.6a3d8af0.png": "/my-web-react-v2/static/media/big-LastfmClone.6a3d8af0.png",
+    "static/media/big-Matitsogo.1a49e174.png": "/my-web-react-v2/static/media/big-Matitsogo.1a49e174.png",
+    "static/media/big-Moiza.ed406355.png": "/my-web-react-v2/static/media/big-Moiza.ed406355.png",
+    "static/media/big-NetflixClone.7839a84e.png": "/my-web-react-v2/static/media/big-NetflixClone.7839a84e.png",
+    "static/media/big-PTPO.cf111a25.png": "/my-web-react-v2/static/media/big-PTPO.cf111a25.png",
+    "static/media/big-my-web-react-v2.3d5f225c.png": "/my-web-react-v2/static/media/big-my-web-react-v2.3d5f225c.png",
+    "static/media/big-my-web-react.b231f8d7.png": "/my-web-react-v2/static/media/big-my-web-react.b231f8d7.png",
+    "static/media/big-twitterCloneCoding.2e9773b8.png": "/my-web-react-v2/static/media/big-twitterCloneCoding.2e9773b8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d4b6ff3.js",
+    "static/js/2.082db305.chunk.js",
+    "static/js/main.b67759f7.chunk.js"
+  ]
+}
